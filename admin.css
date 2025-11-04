@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* ======= ESTILO GERAL ======= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #0c0f16;
+  color: #fff;
+  min-height: 100vh;
+}
+
+/* ======= CABEÇALHO FIXO ======= */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  z-index: 1000;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffcc00;
+}
+
+nav a {
+  color: #fff;
+  margin-left: 20px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+  color: #ffcc00;
+}
+
+/* ======= CONTEÚDO PRINCIPAL ======= */
+main {
+  padding: 120px 2rem 2rem; /* espaçamento extra no topo */
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+h2 {
+  color: #ffcc00;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* ======= LOGIN ======= */
+#loginSection {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  padding: 2rem;
+  max-width: 400px;
+  margin: 2rem auto;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(255, 204, 0, 0.1);
+}
+
+#loginSection input {
+  width: 90%;
+  margin: 0.5rem 0;
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+
+#btnLogin {
+  background: linear-gradient(45deg, #ffcc00, #ffaa00);
+  border: none;
+  padding: 0.8rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #000;
+  font-weight: 600;
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+
+#btnLogin:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #ffcc00;
+}
+
+#loginMsg {
+  margin-top: 1rem;
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+/* ======= ÁREA ADMIN ======= */
+#adminArea {
+  margin-top: 2rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+#adminArea.locked {
+  opacity: 0.5;
+  pointer-events: none;
+  filter: blur(2px);
+}
+
+/* ======= FORMULÁRIO ======= */
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+form input {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem;
+  color: #fff;
+  width: 200px;
+  text-align: center;
+}
+
+form input::placeholder {
+  color: #aaa;
+}
+
+form button {
+  background: linear-gradient(45deg, #ffcc00, #ffaa00);
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 1.5rem;
+  color: #000;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+form button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #ffcc00;
+}
+
+/* ======= TABELA ======= */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+thead {
+  background: #ffcc00;
+  color: #000;
+}
+
+th, td {
+  padding: 0.8rem;
+  text-align: center;
+}
+
+tbody tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+tbody tr:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* ======= BOTÃO DE LOGOUT ======= */
+#btnLogout {
+  margin-top: 1rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background: transparent;
+  border: 2px solid #ffcc00;
+  border-radius: 8px;
+  padding: 0.6rem 1.2rem;
+  color: #ffcc00;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#btnLogout:hover {
+  background: #ffcc00;
+  color: #000;
+  transform: scale(1.05);
+}
+
+/* ======= RODAPÉ ======= */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.8);
+  font-size: 0.9rem;
+  color: #bbb;
+  margin-top: 2rem;
+}

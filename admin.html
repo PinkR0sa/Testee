@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VBL Legends — Painel Admin</title>
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>⚙️ VBL Legends — Painel Administrativo</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="ranking.html">Ranking</a>
+        <a href="admin.html" class="active">Admin</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section id="loginSection">
+        <h2>Login do Administrador</h2>
+        <div style="margin-top:12px; display:flex; flex-direction:column; align-items:center; gap:8px;">
+          <input id="loginUser" type="text" placeholder="Usuário" autocomplete="username" />
+          <input id="loginPass" type="password" placeholder="Senha" autocomplete="current-password" />
+          <div style="display:flex; gap:8px; margin-top:8px;">
+            <button id="btnLogin">Entrar</button>
+            <button id="btnLogout" style="display:none">Logout</button>
+          </div>
+          <div id="loginMsg">Informe credenciais para desbloquear o painel</div>
+        </div>
+      </section>
+
+      <section id="adminArea" class="locked" aria-disabled="true">
+        <h2 style="margin-top:18px">Gerenciar Jogadores</h2>
+
+        <!-- formulário de adicionar (btn começa disabled; será habilitado só após login) -->
+        <form id="addForm" style="justify-content:center; display:flex; flex-wrap:wrap; gap:12px; margin-top:12px;">
+          <input id="pName" type="text" placeholder="Nome do jogador" />
+          <input id="pScore" type="number" placeholder="Pontuação" />
+          <input id="pTeam" type="text" placeholder="Time" />
+          <!-- botão vem disabled por padrão -->
+          <button id="btnAdd" type="button" disabled>Adicionar</button>
+        </form>
+
+        <!-- tabela com os jogadores (tbody populado pelo js/admin.js) -->
+        <div style="overflow:auto; margin-top:14px">
+          <table id="adminTable">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Nome</th>
+                <th>Time</th>
+                <th>Pontuação</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- preenchido pelo JS -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      © VBL Legends — Painel Administrativo
+    </div>
+  </footer>
+
+  <!-- scripts: db (IndexedDB) e admin (login + CRUD seguro) -->
+  <script src="script.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>
